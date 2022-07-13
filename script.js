@@ -7,7 +7,7 @@ function createGrid(num) {
         square.style.height = `${squareDimension}px`;
         square.addEventListener('mouseover', (e) => {
             e.target.style.background = 'DeepSkyBlue';
-        })
+        });
         grid.appendChild(square);
     }
 }
