@@ -1,7 +1,6 @@
 function createGrid(num) {
     const grid = document.querySelector('#grid');
     let squareDimension = getComputedStyle(grid).maxWidth.slice(0, -2)/num;
-    console.log(squareDimension);
     for (let i = 0; i < num * num; i++) {
         const square = document.createElement('div');
         square.style.width = `${squareDimension}px`;
