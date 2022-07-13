@@ -13,14 +13,17 @@ function createGrid(num) {
     }
 }
 
-const dimensionButton = document.querySelector("#dimension");
-dimensionButton.addEventListener('click', () => {
-    let input = prompt("How many squares per side? (max 100)");
-    while ((input > 100 || input < 1 || isNaN(input)) && input !== null) {
-        alert("Please enter a number between 1 and 100.");
-        input = prompt("How many squares per side? (max 100)");
-    }
-    createGrid(input);
-});
+function handleDimensionButton() {
+    const dimensionButton = document.querySelector("#dimension");
+    dimensionButton.addEventListener('click', () => {
+        let input = prompt("How many squares per side? (max 100)");
+        while ((input > 100 || input < 1 || isNaN(input)) && input !== null) {
+            alert("Please enter a number between 1 and 100.");
+            input = prompt("How many squares per side? (max 100)");
+        }
+        createGrid(input);
+    });
+}
 
+handleDimensionButton();
 createGrid(10);
