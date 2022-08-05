@@ -3,4 +3,5 @@
     flex-wrap: wrap;
     max-width: 640px;
     border: 1px solid black;
+    justify-content: center;
 }

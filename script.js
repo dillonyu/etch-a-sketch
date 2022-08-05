@@ -6,12 +6,10 @@ function createGrid(num) {
         const square = document.createElement('div');
         square.style.width = `${squareDimension}px`;
         square.style.height = `${squareDimension}px`;
+        let percent = 0.1;
         square.addEventListener('mouseover', (e) => {
-            // random color generator
-            const randR = Math.random() * 257;
-            const randB = Math.random() * 257;
-            const randG = Math.random() * 257;
-            e.target.style.background = `rgb(${randR}, ${randB}, ${randG})`;
+            e.target.style.background = `rgb(0, 0, 0, ${percent})`;
+            percent += 0.1;
         });
         grid.appendChild(square);
     }
