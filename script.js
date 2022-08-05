@@ -7,7 +7,11 @@ function createGrid(num) {
         square.style.width = `${squareDimension}px`;
         square.style.height = `${squareDimension}px`;
         square.addEventListener('mouseover', (e) => {
-            e.target.style.background = 'DeepSkyBlue';
+            // random color generator
+            const randR = Math.random() * 257;
+            const randB = Math.random() * 257;
+            const randG = Math.random() * 257;
+            e.target.style.background = `rgb(${randR}, ${randB}, ${randG})`;
         });
         grid.appendChild(square);
     }
@@ -21,7 +25,9 @@ function handleDimensionButton() {
             alert("Please enter a number between 1 and 100.");
             input = prompt("How many squares per side? (max 100)");
         }
-        createGrid(input);
+        if (input !== null) {
+            createGrid(input);
+        }
     });
 }
 
